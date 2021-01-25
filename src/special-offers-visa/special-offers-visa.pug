@@ -1,0 +1,13 @@
+extends ../templates/template
+block base
+	base(href='../')
+block title
+	title Information-support
+block append style
+block content
+	include ../blocks/sidebar
+	include ../blocks/header
+		block tabs
+			+headerTab("тип услуг","СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ И АКЦИИ", 'Визовая поддержка')
+	main.page
+		include content

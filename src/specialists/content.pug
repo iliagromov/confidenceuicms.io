@@ -1,0 +1,22 @@
+section.main
+    .ui.bottom.attached.tab.segment.active(data-tab='0')
+        h3.ui.header Содержание
+        .page-block-titleInputText
+            +titleInputText("Название русское","48 знаков максимум","Высококвалифицированные специалисты")
+        
+        .page-block-titleInputText
+            +titleInputText("Название английское","48 знаков максимум","Highly qualified specialists")
+            button.ui.blue.button Сохранить
+        h3.ui.header Услуги
+        button.ui.blue.button + Добавить
+        include ../blocks/components/info-message
+        include ../blocks/components/table-specialists
+    .ui.bottom.attached.tab.segment(data-tab='1')
+        h3.ui.header Привязка материалов информационного агентства (МИА)
+        h4.ui.header.header__subtitle.page__icon_mark-positive Добавить МИА
+        .page-block-select.page-block-select_2
+            include ../blocks/components/select
+            include ../blocks/components/select
+        button.ui.blue.button Добавить
+        +infoMeassge("Сортировать МИА нужно непосредственно в дочерних услугах. Здесь осуществляется только привязка. Управляйте последовательностью вывода перетаскиванием строк.")
+        include ../blocks/components/table-specialists-mia

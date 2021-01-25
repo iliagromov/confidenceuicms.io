@@ -1,0 +1,17 @@
+extends ../templates/template
+block base
+	base(href='../')
+block title
+	title Srvm
+block append style
+block content
+	include ../blocks/sidebar
+	include ../mixins/mixin-info-message
+	include ../mixins/mixin-titleInputText
+	include ../mixins/mixin-titleAreaText
+	include ../mixins/mixin-titleBtnAddText
+	include ../blocks/header
+		block tabs
+			+headerTab("направление деятельности","ВИЗОВАЯ ПОДДЕРЖКА",[{"title":"Русский"},{"title":"Английский"},{"title":"Оформление"},{"title":"П-взаимод."},{"title":"Услуги"},{"title":"МИА"},{"title":"Страны"}])
+	main.page
+		include content

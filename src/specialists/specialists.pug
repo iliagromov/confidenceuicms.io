@@ -1,0 +1,15 @@
+extends ../templates/template
+block base
+	base(href='../')
+block title
+	title Specialists
+block append style
+block content
+	include ../blocks/sidebar
+	include ../mixins/mixin-titleInputText
+	include ../mixins/mixin-info-message
+	include ../blocks/header
+		block tabs
+			+headerTab("тип услуг","Высококвалифицированные специалисты",[{"title":"Содержание"},{"title":"МИА"}])
+	main.page
+		include content

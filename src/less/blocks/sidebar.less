@@ -1,0 +1,76 @@
+.sidebar {
+    
+    .ui.vertical.menu>.item:first-child{
+       padding: 0;
+    }
+    .ui.sidebar.inverted.vertical.menu.ui.visible.sidebar {
+        &::-webkit-scrollbar {
+            width: 5px;
+            height: 0px;
+          }
+        &::-webkit-scrollbar-thumb {
+            background-color: #656565;
+            border-radius: 50px;
+          }
+        &::-webkit-scrollbar-track-piece {
+            background-color:#1B1C1D;
+          }
+        &::-webkit-scrollbar-button {
+            width: 0px;
+            height: 0px;
+        }
+        width: 250px;
+        .sidebar__logo {
+            text-align: center;
+            padding: 13px 0px 11px;
+            img {
+                cursor: pointer;
+            }
+        }
+        & > .item{
+            padding: 0;
+        }
+        .item {
+            padding-left: 0;
+            padding-right: 0;
+           
+            .subtitle{
+                padding-top: 10px;
+                padding-left: 24px; 
+                padding-bottom: 7px;
+                color: #373737;
+            }
+            > .item{
+                text-transform: uppercase;
+                padding-bottom: 5px;
+                padding-top: 5px;
+                padding: 5px 5px 5px 0;
+                &:first-child{
+                    padding-top: 7px;
+                }
+                &:last-child{
+                    padding-bottom: 7px;
+                }
+            }
+            .item{
+                padding-left: 24px;
+                &:before{
+                    display: none;
+                }
+            }
+            .menu{
+                margin: 0;
+                .item{
+                    padding: 7px 32px;
+                }
+            }
+            &.active{
+                color: #66AFE9 !important;
+            }
+        }
+
+        a {
+            padding-left: 24px;
+        }
+    }
+}

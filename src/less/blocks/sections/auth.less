@@ -1,0 +1,57 @@
+
+
+.auth {
+
+    display: flex;
+    justify-content: center;
+
+    background-image: url(../assets/img/auth-bg.png);
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    &__logo{
+        margin-bottom: 15px;
+    }
+    .ui.grid{
+        margin: 0;
+    }
+    
+    .ui.large.form{
+        width: 320px !important;
+        .ui.stacked.segment{
+            padding: 50px 35px 6px;
+            &::before,
+            &::after{
+                display: none;
+            }
+            h2.ui.header{
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 19px;
+                text-align: center;
+                justify-content: center;
+                text-transform: uppercase;
+                color: #656565;
+                margin-bottom: 40px;
+            }
+            .field{
+                margin: 0;
+                input{
+                    border-radius: 0 !important;
+                    margin-bottom: 20px;
+                    text-align: center;
+                }
+                .ui.button{
+                    width: 100%;
+                    margin: 20px 0 0 0;
+                    font-size: 16px;
+                    line-height: 21px;
+                }
+            }
+        }
+    }
+    
+}

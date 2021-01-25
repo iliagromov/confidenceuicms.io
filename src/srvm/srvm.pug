@@ -1,0 +1,16 @@
+extends ../templates/template
+block base
+	base(href='../')
+block title
+	title Srvm
+block append style
+block content
+	include ../blocks/sidebar
+	include ../mixins/mixin-titleInputText
+	include ../mixins/mixin-titleAreaText
+	include ../mixins/mixin-titleBtnAddText
+	include ../blocks/header
+		block tabs
+			+headerTab("направление деятельности","МИГРАЦИОННЫЙ КОНСАЛТИНГ",[{"title":"Русский"},{"title":"Английский"},{"title":"Оформл-е"},{"title":"П-взаимод."}])
+	main.page
+		include content

@@ -1,0 +1,147 @@
+.page{
+    max-width: 750px;
+    margin-left: 250px;
+    padding-left: 50px;
+    padding-top: 15px;
+    &__icon{
+        display: inline-block;
+        border: none;
+        background-color: transparent;
+        &_pen{
+            .sprite(@icon-pen);
+        }
+        &_eye{
+            .sprite(@icon-eye);
+        }
+        &_basket{
+            .sprite(@icon-basket);
+        }
+        &_nolink{
+            .sprite(@icon-nolink);
+        }
+        &_question{
+            &::before{
+                content: '';
+                cursor: pointer;
+                position: absolute;
+                right: -20px;
+                .sprite(@icon-question);
+            }
+        }
+        &_info-positive{
+            background: #F8FFF3 !important;
+            border-color:#CBEAA2;
+            border-radius: 4px !important;
+            &::before{
+                content: '';
+                cursor: pointer;
+                position: absolute;
+                left: 17px;
+                // top: 25px;
+                top: auto;
+                .sprite(@icon-info-positive);
+            }
+        }
+        &_mark-positive{
+            &::after{
+                content: '';
+                cursor: pointer;
+                position: absolute;
+                top: 3px;
+                right: -20px;
+                .sprite(@icon-mark-positive);
+            }
+        }
+    }
+    &-block-titleInputText,
+    &-block-titleAreaText,
+    &-block-titleBtnText,
+    &-block-titleBtnAddText{
+        margin-bottom: 30px;
+        .ui.header{
+            margin-bottom: 0;
+            font-weight: 300;
+            font-size: 17px;
+            line-height: 22px;
+        }
+        .sub.header{
+            color: #C4C4C4;
+            font-size: 12px;
+            line-height: 22px;
+            font-weight: 300;
+
+        }
+    }
+    &-block-titleBtnText{
+        .ui.header{}
+        .page__img{ 
+            padding-bottom: 10px;
+        }
+        .ui.action.input{
+            max-width: 450px;
+            display: flex;
+        }
+        &__btns{
+            display: flex;
+            .ui.action.input{
+                margin-right: 16px;
+            }
+            .ui.basic.floating.dropdown.button{
+                min-width: 166px;
+                margin: 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    }
+    &-block-titleBtnAddText{
+        .ui.input{
+            max-width: 400px;
+            display: flex;
+            input{
+                margin-right: 8px;
+            }
+            margin-bottom: 8px;
+        }
+        .ui.button{
+            margin: 0;
+            padding: 12px 18px;
+            font-size: 16px;
+        
+        }
+    }
+    &-block-select{
+        .ui.basic.floating.dropdown.button{
+            width: 330px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &_2{
+            display: flex;
+            .ui.basic.floating.dropdown.button{
+                &:first-child{
+                    width: 220px;
+                }
+            }
+        }
+        .ui.basic.floating.dropdown.button{
+            margin-bottom: 15px;
+        }
+    }
+    &-block-input{
+        input{
+          &:first-child{
+              margin-right: 16px;
+          }
+        }
+    }
+    &_version{
+        position: absolute;
+        bottom: 0;
+        color: #656565;
+        font-size: 12px;
+        line-height: 24px;
+    }
+}

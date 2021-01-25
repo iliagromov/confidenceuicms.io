@@ -1,0 +1,42 @@
+- var textEditorRu = "Комплексное сопровождение по всем вопросам, связанным с въездом, пребываением и осуществлением трудовой деятельности иностранных граждан на всей территории РФ "
+- var textEditorEn = "Comprehensive support on all issues related to the entry, stay and employment of foreign citizens throughout the Russian Federation"
+
+section.srvm
+    .ui.bottom.attached.tab.segment.active(data-tab='0')
+        h3.ui.header Содержание
+        .page-block-titleInputText
+            +titleInputText("Название русское","Пояснение","Визовая поддержка")
+        .page-block-titleAreaText
+            +titleAreaText("Описание русское","Пояснение",textEditorRu)
+       
+        h3.ui.header.header__subheader Метаданные русской версии
+        .page-block-titleInputText
+            +titleInputText("Title","не более 3-5 ключевых слов/словосочетаний","Миграционный консалтинг")
+        .page-block-titleInputText
+            +titleInputText("Keywords","70-80 символов","ключ 1, ключ 2, ключ 3…")
+        .page-block-titleAreaText
+            +titleAreaText("Description","мета-описание страницы. Для SEO этот тег один из ключевых.",textEditorRu)
+        h3.ui.header Содержание английской версии
+        .page-block-titleInputText
+            +titleInputText("Название английское","Пояснение","Визовая поддержка")
+        .page-block-titleAreaText
+            +titleAreaText("Описание английское","Пояснение",textEditorEn)
+       
+        h3.ui.header.header__subheader Метаданные русской версии
+        .page-block-titleInputText
+            +titleInputText("Title","не более 3-5 ключевых слов/словосочетаний","Миграционный консалтинг")
+        .page-block-titleInputText
+            +titleInputText("Keywords","70-80 символов","ключ 1, ключ 2, ключ 3…")
+        .page-block-titleAreaText
+            +titleAreaText("Description","мета-описание страницы. Для SEO этот тег один из ключевых.",textEditorEn)
+       
+    .ui.bottom.attached.tab.segment(data-tab='1')
+        h3.ui.header Новости
+        button.ui.blue.button + Добавить
+        include ../blocks/components/info-message
+        include ../blocks/components/table-specialists-mia
+    .ui.bottom.attached.tab.segment(data-tab='2')
+        h3.ui.header Публикации
+        button.ui.blue.button + Добавить
+        include ../blocks/components/info-message
+        include ../blocks/components/table-specialists-mia

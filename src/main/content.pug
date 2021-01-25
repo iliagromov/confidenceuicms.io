@@ -1,0 +1,84 @@
+- var textEditorRu = "С 2007 года Конфиденс Групп является экспертом в области миграционного консалтинга, визовой поддержки для выезжающих зарубеж, подбора жилья и релокационных услуг, а также организации индивидуальных путешествий, а также регистрации и аккредитации бизнеса."
+- var textEditorEn = "Since 2007, Confidence Group has been an expert in the field of migration consulting, visa support for people traveling abroad, housing and relocation services, as well as individual travel arrangements, as well as business registration and accreditation."
+
+section.main
+    .ui.bottom.attached.tab.segment.active(data-tab='0')
+        h3.ui.header.header__title Содержание
+        .page-block-titleInputText
+            +titleInputText("Название русское","Пояснение","Конфиденс групп","page__icon_question")
+        .page-block-titleAreaText
+            +titleAreaText("Описание русское","Пояснение",textEditorRu)
+        
+        h3.ui.header.header__title  Метаданные русской версии
+        .page-block-titleInputText
+            +titleInputText("Title","не более 3-5 ключевых слов/словосочетаний","Конфиденс групп")
+        .page-block-titleInputText
+            +titleInputText("Keywords","70-80 символов","ключ 1, ключ 2, ключ 3…")
+        .page-block-titleAreaText
+            +titleAreaText("Description","мета-описание страницы. Для SEO этот тег один из ключевых.",textEditorRu)
+        
+    .ui.bottom.attached.tab.segment(data-tab='1')
+        h3.ui.header.header__title Содержание
+        .page-block-titleInputText
+            +titleInputText("Название английское","Пояснение","Confidence Group")
+        .page-block-titleAreaText
+            +titleAreaText("Описание английское","Пояснение",textEditorEn)
+        
+        h3.ui.header.header__title  Метаданные английской версии
+        .page-block-titleInputText
+            +titleInputText("Title","не более 3-5 ключевых слов/словосочетаний","Конфиденс групп")
+        .page-block-titleInputText
+            +titleInputText("Keywords","70-80 символов","ключ 1, ключ 2, ключ 3…")
+        .page-block-titleAreaText
+            +titleAreaText("Description","мета-описание страницы. Для SEO этот тег один из ключевых.",textEditorEn)
+        
+    .ui.bottom.attached.tab.segment(data-tab='2')
+        h3.ui.header.header__title Текстовые блоки главной страницы
+        h4.ui.header.header__title Услуги
+        .page-block-titleAreaText
+            +titleAreaText("Услуги, анонс. (рус.)","140 символов с пробелами максимум.",textEditorRu)
+        .page-block-titleAreaText
+            +titleAreaText("Услуги, анонс. (анг.)","140 символов с пробелами максимум.",textEditorEn)
+        
+        h4.ui.header.header__title Клиенты
+        .page-block-titleAreaText
+            +titleAreaText("Клиенты, анонс. (рус.)","140 символов с пробелами максимум.",textEditorRu)
+        .page-block-titleAreaText
+            +titleAreaText("Услуги, анонс. (анг.)","140 символов с пробелами максимум.",textEditorEn)
+        
+        h4.ui.header.header__title Информагентство
+        .page-block-titleAreaText
+            +titleAreaText("Информагентство, анонс. (рус.)","140 символов с пробелами максимум.",textEditorRu)
+        .page-block-titleAreaText
+            +titleAreaText("Информагентство, анонс. (анг.)","140 символов с пробелами максимум.",textEditorEn)
+        
+        h4.ui.header.header__title Футер
+        .page-block-titleAreaText
+            +titleAreaText("Контакты, (рус.)","140 символов с пробелами максимум.","Тел.: +7 495 748-77-62; 8 800 222-77-62 (бесплатные звонки в России); Факс: +7 495 748-77-62; info@confidencegroup.ru")
+        .page-block-titleAreaText
+            +titleAreaText("Контакты, (анг.)","140 символов с пробелами максимум.","Tel./fax: +7 495 748-77-62; 8 800 222-77-62 (toll free calls in Russia); info@confidencegroup.ru")
+        .page-block-titleAreaText
+            +titleAreaText("Офис в Москве. (рус.)","140 символов с пробелами максимум.","105082, Спартаковская площадь, д. 14, стр. 2(вход со стороны ул. Бауманская), Особняк Bristol, бизнес-центр Central Street,3 этаж, офис 2306")
+        .page-block-titleAreaText
+            +titleAreaText("Офис в Москве. (анг.)","140 символов с пробелами максимум.","105082, Spartakovskaya Square, 14, bld. 2(entrance from Baumanskaya Street), Bristol Mansion, Central Street Business Center,3rd floor, office 2306")
+        .page-block-titleAreaText
+            +titleAreaText("Часы работы. (рус.)","140 символов с пробелами максимум.","Понедельник — пятница С 9:00 до 18:00")
+        .page-block-titleAreaText
+            +titleAreaText("Часы работы. (анг.)","140 символов с пробелами максимум.","Monday - Friday From 9 a.m. to 6 p.m.")
+        
+    .ui.bottom.attached.tab.segment(data-tab='3')
+        h3.ui.header.header__title Слайдер с логотипами клиентов
+        
+        .page-block-titleBtnText
+            h4.ui.header Добавить слайд
+            .sub.header.header__subheader Иллюстрацию вписать в габариты 230x153
+            div.page-block-titleBtnText__btns
+                include ../blocks/components/btn-upload
+                include ../blocks/components/select
+            button.ui.blue.button Сохранить
+        include ../blocks/components/info-message
+        h3.ui.header.header__title Российские бренды
+        h4.ui.header.header__title Слайд 1
+        include ../blocks/components/table-main
+        h4.ui.header.header__title Слайд 2
+        include ../blocks/components/table-main

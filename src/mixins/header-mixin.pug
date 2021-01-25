@@ -1,0 +1,8 @@
+mixin headerTab(subtitle,title,items,subheader)
+    .header__sub
+        .sub.header=subtitle
+        h1.ui.header=title
+        h2.sub.header=subheader
+        .ui.top.attached.tabular.menu
+            each item, index in items
+                .item(data-tab=index)=item.title

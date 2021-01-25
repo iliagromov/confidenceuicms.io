@@ -1,0 +1,15 @@
+section.auth
+    .ui.middle.aligned.center.aligned.grid
+        .column
+            .auth__logo 
+                    img(src="assets/img/logo-main.svg", alt="logo")
+            form.ui.large.form
+                .ui.stacked.segment
+                    h2.ui.header Панель управления
+                    .field
+                        input(type="text" name="name" placeholder="Имя")
+                    .field
+                        input(type="text" name="password" placeholder="Пароль")
+                        a.ui.blue.button(href="main/main.html") Войти
+                .ui.error.message
+    .page_version version #{release}

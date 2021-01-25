@@ -1,0 +1,97 @@
+- var textEditorRu = "Комплексное сопровождение по всем вопросам, связанным с въездом, пребываением и осуществлением трудовой деятельности иностранных граждан на всей территории РФ "
+- var textEditorEn = "Comprehensive support on all issues related to the entry, stay and employment of foreign citizens throughout the Russian Federation"
+
+section.srvm
+    .ui.bottom.attached.tab.segment.active(data-tab='0')
+        h3.ui.header Содержание
+        .page-block-titleInputText
+            +titleInputText("Название русское","Пояснение","Визовая поддержка")
+        .page-block-titleAreaText
+            +titleAreaText("Описание русское","Пояснение",textEditorRu)
+       
+        h3.ui.header.header__subheader Метаданные русской версии
+        .page-block-titleInputText
+            +titleInputText("Title","не более 3-5 ключевых слов/словосочетаний","Миграционный консалтинг")
+        .page-block-titleInputText
+            +titleInputText("Keywords","70-80 символов","ключ 1, ключ 2, ключ 3…")
+        .page-block-titleAreaText
+            +titleAreaText("Description","мета-описание страницы. Для SEO этот тег один из ключевых.",textEditorRu)
+       
+    .ui.bottom.attached.tab.segment(data-tab='1')
+        h3.ui.header Содержание
+        .page-block-titleInputText
+            +titleInputText("Название английское","Пояснение","Визовая поддержка")
+        .page-block-titleAreaText
+            +titleAreaText("Описание английское","Пояснение",textEditorEn)
+       
+        h3.ui.header.header__subheader Метаданные русской версии
+        .page-block-titleInputText
+            +titleInputText("Title","не более 3-5 ключевых слов/словосочетаний","Миграционный консалтинг")
+        .page-block-titleInputText
+            +titleInputText("Keywords","70-80 символов","ключ 1, ключ 2, ключ 3…")
+        .page-block-titleAreaText
+            +titleAreaText("Description","мета-описание страницы. Для SEO этот тег один из ключевых.",textEditorEn)
+       
+    .ui.bottom.attached.tab.segment(data-tab='2')
+        h3.ui.header Оформление
+        .page-block-titleBtnText
+            h4.ui.header Фоновая иллюстрация
+            .sub.header.header__subheader Готовый слайд точного размера 585х300
+            img.page__img(src="assets/img/img-srvm-2.png", alt="")
+            include ../blocks/components/btn-upload
+            button.ui.blue.button Сохранить
+    .ui.bottom.attached.tab.segment(data-tab='3')
+        h3.ui.header Порядок взаимодействия
+        .page-block-select
+            include ../blocks/components/select
+        h3.ui.header Русскоязычная версия
+        .page-block-titleInputText
+            +titleInputText("Заголовок","максимум 21 символ, максимальная длина слова 10 ","подготовка документов")
+        .page-block-titleBtnAddText
+            +titleBtnAddText("Блок «Клиент»", "Элемент списка, максимальная длина 60 символов с пробелами",[{"text":"Подача документов"}],"page__icon_mark-positive")
+        .page-block-titleBtnAddText
+            +titleBtnAddText("Блок «Консультант»","Элемент списка, максимальная длина 60 символов с пробелами",[{"text":"Согласование с руководством"},{"text":"Сопровождение при личных визитах"},{"text":"Ускорение"},{"text":"Решение сложных вопросов"}], "page__icon_mark-positive")
+        
+        h3.ui.header Англоязычная версия
+        .page-block-titleInputText
+            +titleInputText("Заголовок","максимум 21 символ, максимальная длина слова 10 ","подготовка документов")
+        .page-block-titleBtnAddText
+            +titleBtnAddText("Блок «Client»", "Элемент списка, максимальная длина 60 символов с пробелами",[{"text":"Preparation of documents"}],"page__icon_mark-positive")
+        .page-block-titleBtnAddText
+            +titleBtnAddText("Блок «Consultant»","Элемент списка, максимальная длина 60 символов с пробелами",[{"text":"Coordination with management"},{"text":"Personal visit support"},{"text":"Acceleration"},{"text":"Solving complex issues"}], "page__icon_mark-positive")
+        
+        h4.ui.header Иллюстрация русскоязычная
+        .page-block-titleBtnText
+            .sub.header.header__subheader Готовый слайд точного размера 585х300
+            img.page__img(src="assets/img/img-srvm-2.png", alt="")
+            include ../blocks/components/btn-upload
+            button.ui.blue.button Сохранить
+        h4.ui.header Иллюстрация англоязычная
+        .page-block-titleBtnText
+            .sub.header.header__subheader Готовый слайд точного размера 585х300
+            img.page__img(src="assets/img/img-srvm-2.png", alt="")
+            include ../blocks/components/btn-upload
+            button.ui.blue.button Сохранить
+    .ui.bottom.attached.tab.segment(data-tab='4')
+        h4.ui.header Услуги
+        button.ui.blue.button Добавить
+        include ../blocks/components/info-message
+        include ../blocks/components/table-specialists-mia
+    .ui.bottom.attached.tab.segment(data-tab='5')
+        h4.ui.header Привязка материалов информационного агентства (МИА)
+        .page-block-select.page-block-select_2
+            include ../blocks/components/select
+            include ../blocks/components/select
+        button.ui.blue.button Добавить
+        +infoMeassge("Сортировать МИА нужно непосредственно в дочерних услугах. Здесь осуществляется только привязка. Управляйте последовательностью вывода перетаскиванием строк.")
+        include ../blocks/components/table-specialists-mia
+    .ui.bottom.attached.tab.segment(data-tab='6')
+        h4.ui.header Страны
+        div.page-block-input.page-block-input_2
+             .ui.input
+                    input(type='text' placeholder='Русское название')
+                    input(type='text' placeholder='Английское название')
+                    
+        button.ui.blue.button Добавить
+        +infoMeassge("Сортировать МИА нужно непосредственно в дочерних услугах. Здесь осуществляется только привязка. Управляйте последовательностью вывода перетаскиванием строк.")
+        include ../blocks/components/table-specialists-mia

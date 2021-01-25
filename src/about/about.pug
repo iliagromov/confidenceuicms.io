@@ -1,0 +1,15 @@
+extends ../templates/template
+block base
+	base(href='../')
+block title
+	title About
+block append style
+block content
+	include ../blocks/sidebar
+	include ../mixins/mixin-titleInputText
+	include ../mixins/mixin-titleAreaText
+	include ../blocks/header
+		block tabs
+			+headerTab("раздел","О компании",[{"title":"Русский"},{"title":"Английский"},{"title":"Отзывы рус."},{"title":"Отзывы анг."},{"title":"Команда"},{"title":"Сертификт."}])
+	main.page
+		include content

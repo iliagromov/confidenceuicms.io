@@ -1,0 +1,56 @@
+- var textEditorRu = "Разрешение на работу сопровождающего члена семьи высококвалифицированного специалиста (ВКС)"
+- var textEditorRu2 = "Оформляется членам семьи высококвалифицированных специалистов в упрощенном порядке на срок не превышающий срок действия разрешения на работу основных высококвалифицированных специалистов"
+- var textEditorRu3 = "Оформляется членам семьи высококвалифицированных специалистов в упрощенном порядке на срок не превышающий срок действия разрешения на работу основных высококвалифицированных специалистов, Оформляется членам семьи высококвалифицированных специалистов в упрощенном порядке на срок не превышающий срок действия разрешения на работу основных высококвалифицированных специалистов."
+- var textEditorEn = "Комплексное сопровождение по всем вопросам, связанным с въездом, пребываением и осуществлением трудовой деятельности иностранных граждан на всей территории РФ "
+
+section.main
+    .ui.bottom.attached.tab.segment.active(data-tab='0')
+        h3.ui.header Содержание русскоязычной версии
+        .page-block-titleAreaText
+            +titleAreaText("Название русское","максимум 91 символ",textEditorRu)
+        .page-block-titleAreaText
+            +titleAreaText("Анонс русский","Максимум 187 символов",textEditorRu2)
+        .page-block-titleAreaText
+            +titleAreaText("Описание русское","Максимум 375 символов",textEditorRu3)
+        h3.ui.header Метаданные русской версии
+        .page-block-titleInputText
+            +titleInputText("Title","не более 3-5 ключевых слов/словосочетаний","Миграционный консалтинг")
+        .page-block-titleInputText
+            +titleInputText("Keywords","70-80 символов","ключ 1, ключ 2, ключ 3…")
+        .page-block-titleAreaText
+            +titleAreaText("Description","мета-описание страницы. Для SEO этот тег один из ключевых.",textEditorEn)
+       
+    .ui.bottom.attached.tab.segment(data-tab='1')
+        h3.ui.header Содержание англоязычной версии
+        .page-block-titleAreaText
+            +titleAreaText("Название английское","максимум 91 символ",textEditorRu)
+        .page-block-titleAreaText
+            +titleAreaText("Анонс английский","Максимум 187 символов",textEditorRu2)
+        .page-block-titleAreaText
+            +titleAreaText("Описание английское","Максимум 375 символов",textEditorRu3)
+        h3.ui.header Метаданные английской версии
+        .page-block-titleInputText
+            +titleInputText("Title","не более 3-5 ключевых слов/словосочетаний","Миграционный консалтинг")
+        .page-block-titleInputText
+            +titleInputText("Keywords","70-80 символов","ключ 1, ключ 2, ключ 3…")
+        .page-block-titleAreaText
+            +titleAreaText("Description","мета-описание страницы. Для SEO этот тег один из ключевых.",textEditorEn)
+       
+    .ui.bottom.attached.tab.segment(data-tab='2')
+        .page-block-titleBtnText
+            .sub.header.header__subheader Готовый слайд точного размера 585х300
+            img.page__img(src="assets/img/img-srvm-2.png", alt="")
+            include ../blocks/components/btn-upload
+            button.ui.blue.button Сохранить
+    .ui.bottom.attached.tab.segment(data-tab='3')
+        h3.ui.header Варианты оказания услуги
+        button.ui.blue.button + Добавить
+        
+        include ../blocks/components/info-message
+        
+        include ../blocks/components/table-specialists-vcs-1
+        button.ui.blue.button Сохранить
+    .ui.bottom.attached.tab.segment(data-tab='4')
+        h3.ui.header Привязка МИА
+        +infoMeassge("Сортировать МИА нужно непосредственно в дочерних услугах. Здесь осуществляется только привязка. Управляйте последовательностью вывода перетаскиванием строк.")
+        include ../blocks/components/table-specialists-vcs-2

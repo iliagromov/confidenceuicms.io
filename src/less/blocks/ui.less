@@ -1,0 +1,76 @@
+.ui.header,
+h1, h2, h3, h4, h5,
+.ui.menu,
+.ui.button{
+    font-family: 'Roboto',Arial,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+.ui.blue.button, .ui.blue.buttons .button{
+    background-color: @color_blue;
+}
+.ui.header.page__icon_question,
+.ui.positive.page__icon_info-positive,
+.ui.header.page__icon_mark-positive{
+    position: relative;
+    display: inline-block;
+
+
+}
+.ui.positive.page__icon_info-positive{
+    display: flex;
+    align-items: center;
+}
+.ui.positive.page__icon_info-positive{
+    padding-left: 50px;
+}
+.ui.table>thead>tr>th,
+.ui.table>tbody>tr>td, .ui.table>tr>td{
+    text-align: center;
+}
+td[data-label="Action"]{
+    //FIXME: !important
+    padding: 0 !important;
+    .page__icon{
+        &:nth-child(2){
+            margin: 0 5px;
+        }
+    }
+}
+.ui.form input:not([type]):focus, .ui.form input[type=date]:focus, .ui.form input[type=datetime-local]:focus, .ui.form input[type=email]:focus, .ui.form input[type=file]:focus, .ui.form input[type=number]:focus, .ui.form input[type=password]:focus, .ui.form input[type=search]:focus, .ui.form input[type=tel]:focus, .ui.form input[type=text]:focus, .ui.form input[type=time]:focus, .ui.form input[type=url]:focus{
+    border-color: #66AFE9;
+}
+.ui.calendar{
+    width: 200px;
+}
+.ui.celled.table>tbody>tr>td, .ui.celled.table>tbody>tr>th, .ui.celled.table>tfoot>tr>td, .ui.celled.table>tfoot>tr>th, .ui.celled.table>thead>tr>th, .ui.celled.table>tr>td, .ui.celled.table>tr>th{
+    font-size: 16px;
+}
+.ui.table{
+    tbody tr{
+        &:hover{
+            background-color: #E9F3FF;
+        }
+    }
+}
+.ui.tabular.menu .item{
+    font-weight: normal !important;
+    font-size: 18px;
+    line-height: 22px;
+}
+.ui.menu .item{
+    font-size: 16px;
+    line-height: 16px;
+}
+.sidebar .ui.sidebar.inverted.vertical.menu.ui.visible.sidebar .item .menu .item{
+    font-size: 14px;
+line-height: 16px;
+}
+.ui.tabular.menu .active.item{
+}
+.ui.input>input{
+    &::placeholder{
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 22px;
+        color: #000000;
+    }
+}

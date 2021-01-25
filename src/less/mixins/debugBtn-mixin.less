@@ -1,0 +1,43 @@
+.debugBtn() {
+    &-btn {
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        width: 50px;
+        height: 50px;
+        border: 1px solid #ff0;
+        border-radius: 50%;
+        z-index: 1;
+        background: rgba(0, 0, 0, 0.4);
+
+        &__hidden {
+            display: none;
+        }
+
+        &:before,
+        &:after {
+            content: '';
+            align-self: center;
+            background: #000;
+        }
+
+        &:before {
+            width: 25px;
+            height: 2px;
+        }
+
+        &__create {
+            &:after {
+                width: 2px;
+                height: 25px;
+                position: absolute;
+            }
+        }
+    }
+
+    &__z-index-negative {
+        z-index: -1;
+    }
+}

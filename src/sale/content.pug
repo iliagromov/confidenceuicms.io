@@ -1,0 +1,29 @@
+- var textEditorRu = "Для членов Американской Торговой Палаты в РФ, Финско-Российской Торговой Палаты в РФ, Торгово-Промышленной Палаты РФ и других бизнес-сообществ РФ скидка на миграционные и визовые услуги составляет 30% от стандартной стоимости услуг Конфиденс Групп. Условия акции: не распространяются на действующие договоры с Конфиденс Групп; распространяются на услуги Конфиденс Групп в рамках договоров, заключенных в период с 01.06.2017 по 31.08.2017; распространяются только на безналичные расчеты между организациями; не распространяются на государственные пошлины, Консульские и другие сборы государственных и коммерческих организаций; скидка действует до 31.12.2017 года. За дополнительной информацией обращайтесь к консультантам Конфиденс Групп. "
+- var textEditorEn = " For members of the American Chamber of Commerce in the Russian Federation, the Finnish-Russian Chamber of Commerce in the Russian Federation, the Chamber of Commerce and Industry of the Russian Federation and other business communities of the Russian Federation, a discount on migration and visa services is 30% of the standard cost of Confidence Group services. Promotion terms: do not apply to existing agreements with Confidence Group; apply to the services of the Confidence Group under the contracts concluded during the period from 06/01/2017 to 08/31/2017; apply only to non-cash payments between organizations; do not apply to state duties, Consular and other fees of state and commercial organizations; The discount is valid until 12/31/2017. For more information, contact the consultants of Confidence Group."
+section.main
+    .ui.bottom.attached.tab.segment.active(data-tab='0')
+        include ../blocks/components/info-message
+        button.ui.blue.button + Добавить
+        include ../blocks/components/table-sale
+    .ui.bottom.attached.tab.segment(data-tab='1')
+        h3.ui.header Содержание
+        h4.ui.header Дата
+        include ../blocks/components/datepicker
+        h4.ui.header Оформление
+        .page-block-titleBtnText
+            h5.ui.header Иллюстрация
+            .sub.header.header__subheader Шрина 850 JPG качеством не ниже 65
+            img.page__img(src="assets/img/img-srvm-2.png", alt="")
+            include ../blocks/components/btn-upload
+            button.ui.blue.button Сохранить
+        h3.ui.header Русскоязычная версия
+        .page-block-titleInputText
+            +titleInputText("Название русское","Пояснение","Скидка для членов Американской Торговой Палаты в РФ")
+        .page-block-titleAreaText
+            +titleAreaText("Текст русский","Пояснение",textEditorRu)
+       
+        h3.ui.header Англоязычная версия
+        .page-block-titleInputText
+            +titleInputText("Название английское","Пояснение","Discount for members of the American Chamber of Commerce in the Russian Federation")
+        .page-block-titleAreaText
+            +titleAreaText("Текст английский","Пояснение",textEditorEn)

@@ -1,0 +1,5 @@
+mixin titleInputText(title,subtitle, text, icon)
+    h4.ui.header.header__subtitle(class=icon)=title
+    .sub.header.header__subheader=subtitle
+    .ui.input
+        input(type='text' placeholder=text)

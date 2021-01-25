@@ -1,0 +1,15 @@
+extends ../templates/template
+block base
+	base(href='../')
+block title
+	title Main
+block append style
+block content
+	include ../blocks/sidebar
+	include ../mixins/mixin-titleInputText
+	include ../mixins/mixin-titleAreaText
+	include ../blocks/header
+		block tabs
+			+headerTab("раздел","Главная страница",[{"title":"Русский"},{"title":"Английский"},{"title":"Текст"},{"title":"Клиенты"}])
+	main.page
+		include content

@@ -1,0 +1,17 @@
+extends ../templates/template
+block base
+	base(href='../')
+block title
+	title Information-support
+block append style
+block content
+	include ../blocks/sidebar
+	include ../mixins/mixin-info-message
+	include ../mixins/mixin-titleInputText
+	include ../mixins/mixin-titleAreaText
+	include ../mixins/mixin-titleBtnAddText
+	include ../blocks/header
+		block tabs
+			+headerTab("тип услуг","Пакетные услуги",[{"title":"Содержание"},{"title":"МИА"}],'Релокационные услуги')
+	main.page
+		include content

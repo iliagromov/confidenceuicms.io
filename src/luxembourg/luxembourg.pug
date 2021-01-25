@@ -1,0 +1,17 @@
+extends ../templates/template
+block base
+	base(href='../')
+block title
+	title Luxembourg
+block append style
+block content
+	include ../blocks/sidebar
+	include ../mixins/mixin-info-message
+	include ../mixins/mixin-titleInputText
+	include ../mixins/mixin-titleAreaText
+	include ../mixins/mixin-titleBtnAddText
+	include ../blocks/header
+		block tabs
+			+headerTab("услуга","Виза в Люксембург с туристической целью",[{"title":"Русский"},{"title":"Английский"},{"title":"Оформление"},{"title":"Варианты"},{"title":"Привязка"}], 'Визовая поддержка')
+	main.page
+		include content

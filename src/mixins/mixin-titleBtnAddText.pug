@@ -1,0 +1,8 @@
+mixin titleBtnAddText(title,subtitle, inputs, icon)
+        h4.ui.header.header__subtitle(class=icon)=title
+        .sub.header.header__subheader=subtitle
+        each input in inputs
+            .ui.input
+                input(type='text' placeholder=input.text)
+                button.ui.blue.button -
+        button.ui.blue.button +

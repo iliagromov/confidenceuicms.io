@@ -1,0 +1,16 @@
+extends ../templates/template
+block base
+	base(href='../')
+block title
+	title Specialists
+block append style
+block content
+	include ../blocks/sidebar
+	include ../mixins/mixin-info-message
+	include ../mixins/mixin-titleInputText
+	include ../mixins/mixin-titleAreaText
+	include ../blocks/header
+		block tabs
+			+headerTab("услуга","Разрешение на работу сопровождающего члена семьи высококвалифицированного специалиста (ВКС)",[{"title":"Русский"},{"title":"Английский"},{"title":"Оформление"},{"title":"Варианты"},{"title":"Привязка"}])
+	main.page
+		include content

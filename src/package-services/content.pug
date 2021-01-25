@@ -1,0 +1,22 @@
+section.main
+    .ui.bottom.attached.tab.segment.active(data-tab='0')
+        h3.ui.header Содержание
+        .page-block-titleInputText
+            +titleInputText("Название русское","48 знаков максимум","Пакетные услуги")
+        
+        .page-block-titleInputText
+            +titleInputText("Название английское","48 знаков максимум","Package services")
+            button.ui.blue.button Сохранить
+        h4.ui.header Пакеты
+        include ../blocks/components/info-message
+        button.ui.blue.button + Добавить
+        include ../blocks/components/table-package
+       
+    .ui.bottom.attached.tab.segment(data-tab='1')
+        h4.ui.header Привязка материалов информационного агентства (МИА)
+        .page-block-select.page-block-select_2
+            include ../blocks/components/select
+            include ../blocks/components/select
+        button.ui.blue.button Добавить
+        +infoMeassge("Сортировать МИА нужно непосредственно в дочерних услугах. Здесь осуществляется только привязка. Управляйте последовательностью вывода перетаскиванием строк.")
+        include ../blocks/components/table-specialists-mia

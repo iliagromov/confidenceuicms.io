@@ -1,0 +1,13 @@
+extends ../templates/template
+block base
+	base(href='../')
+block title
+	title Specialists
+block append style
+block content
+	include ../blocks/sidebar
+	include ../blocks/header
+		block tabs
+			+headerTab("спецпредложение","Информационная поддержка 1",[{"title":"Русский"},{"title":"Английский"},{"title":"Текст"},{"title":"Клиенты"}])
+	main.page
+		include content

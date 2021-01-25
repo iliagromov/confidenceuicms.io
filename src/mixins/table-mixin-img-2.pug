@@ -1,0 +1,17 @@
+mixin table(dataThs, dataTds)
+    table.dragTable.draggable-table.ui.celled.table
+        thead
+            tr
+                each item, index in dataThs
+                    th=item.th
+            tbody
+                each td, index in dataTds
+                    tr
+                        td(data-label='Count')=index
+                        td(data-label='Name')=td.name
+                        td(data-label='img')
+                            img(src=td.img)
+                        
+                        td(data-label='Action')
+                            button.page__icon.page__icon_pen
+                            button.page__icon.page__icon_basket

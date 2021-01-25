@@ -1,0 +1,70 @@
+- var textEditorRu = "С 2007 года Конфиденс Групп является экспертом в области миграционного консалтинга, визовой поддержки для выезжающих зарубеж, подбора жилья и релокационных услуг, а также организации индивидуальных путешествий, а также регистрации и аккредитации бизнеса."
+- var textEditorEn = "Since 2007, Confidence Group has been an expert in the field of migration consulting, visa support for people traveling abroad, housing and relocation services, as well as individual travel arrangements, as well as business registration and accreditation."
+- var textEditorPrevRu = "Мы, компания CONFIDENCE GROUP в целях обеспечения поддержки наших Клиентов на пути к достижению их бизнес-задач, торжественно обещаем работать в полном соответствии с законом и международными стандартами качества, постоянно совершенствовать бизнес-процессы. Гарантируем проактивный подход, оперативность в предоставлении услуг и информации, несем полную ответственность перед Клиентами"
+- var textEditorPrevEn = "We are CONFIDENCE GROUP IN ORDER TO SUPPORT OUR CLIENTS ON THE WAY TO ACHIEVE THEIR BUSINESS OBJETIVES, DECLARE TO WORK IN FULL COMPLIENCE WITH LAW AND INTERNATIONAL QUALITY STANDARDS, CONSTANTLY IMPROVE BUSINESS PROCESSES. HEREIN WE GUARANTEE THE PROACTIVE APPROACH, PROMPT ATTENTION WHILE PROVIDING SERVICES AND INFORMATION. WE BARE THE FULL RESPONSIBILITY TO OUR CLIENTS"
+- var textEditorCode = 'iframe width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen'
+section.about
+    .ui.bottom.attached.tab.segment.active(data-tab='0')
+        h3.ui.header.header__title Содержание
+        .page-block-titleInputText
+            +titleInputText("Название русское","Пояснение","Конфиденс групп","page__icon_question")
+        .page-block-titleAreaText
+            +titleAreaText("Описание русское","Пояснение",textEditorRu)
+        
+        h3.ui.header.header__title  Метаданные русской версии
+        .page-block-titleInputText
+            +titleInputText("Title","не более 3-5 ключевых слов/словосочетаний","Конфиденс групп")
+        .page-block-titleInputText
+            +titleInputText("Keywords","70-80 символов","ключ 1, ключ 2, ключ 3…")
+        .page-block-titleAreaText
+            +titleAreaText("Description","мета-описание страницы. Для SEO этот тег один из ключевых.",textEditorRu)
+        .page-block-titleAreaText
+            +titleAreaText("Анонс (рус.)","386 символов максимум включая пробелы",textEditorPrevRu)
+        .page-block-titleAreaText
+            +titleAreaText("Код видео русской версии)","Код из стороннего сервиса для внедрения в страницу, разное видео для русской и английской версий",textEditorCode)
+        
+        h4.ui.header Презентация для ссылки с кнопки
+        .page-block-titleBtnText
+            .sub.header.header__subheader Желателен формат PDF и объём до 3 Мб.
+            include ../blocks/components/btn-upload
+            button.ui.blue.button Сохранить
+    .ui.bottom.attached.tab.segment(data-tab='1')
+        h3.ui.header.header__title Содержание
+        .page-block-titleInputText
+            +titleInputText("Название английское","Пояснение","Конфиденс групп","page__icon_question")
+        .page-block-titleAreaText
+            +titleAreaText("Описание английское","Пояснение",textEditorEn)
+        
+        h3.ui.header.header__title  Метаданные русской версии
+        .page-block-titleInputText
+            +titleInputText("Title","не более 3-5 ключевых слов/словосочетаний","Конфиденс групп")
+        .page-block-titleInputText
+            +titleInputText("Keywords","70-80 символов","ключ 1, ключ 2, ключ 3…")
+        .page-block-titleAreaText
+            +titleAreaText("Description","мета-описание страницы. Для SEO этот тег один из ключевых.",textEditorEn)
+        .page-block-titleAreaText
+            +titleAreaText("Анонс (англ.)","386 символов максимум включая пробелы",textEditorPrevEn)
+        .page-block-titleAreaText
+            +titleAreaText("Код видео английской версии)","Код из стороннего сервиса для внедрения в страницу, разное видео для русской и английской версий",textEditorCode)
+        
+        h4.ui.header Презентация для ссылки с кнопки
+        .page-block-titleBtnText
+            .sub.header.header__subheader Желателен формат PDF и объём до 3 Мб.
+            include ../blocks/components/btn-upload
+            button.ui.blue.button Сохранить
+
+    .ui.bottom.attached.tab.segment(data-tab='2')
+        include ../blocks/components/info-message
+        include ../blocks/components/table-about
+    .ui.bottom.attached.tab.segment(data-tab='3')
+        include ../blocks/components/info-message
+        include ../blocks/components/table-about-en
+    .ui.bottom.attached.tab.segment(data-tab='4')
+        include ../blocks/components/info-message
+        .sub.header.header__subheader Строго 225х249
+        include ../blocks/components/table-img
+    .ui.bottom.attached.tab.segment(data-tab='5')
+        .sub.header.header__subheader Строго 225х249
+        include ../blocks/components/table-img-2
+    
+    

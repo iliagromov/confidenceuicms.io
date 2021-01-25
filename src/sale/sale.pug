@@ -1,0 +1,15 @@
+extends ../templates/template
+block base
+	base(href='../')
+block title
+	title Information-support
+block append style
+block content
+	include ../blocks/sidebar
+	include ../mixins/mixin-titleInputText
+	include ../mixins/mixin-titleAreaText
+	include ../blocks/header
+		block tabs
+			+headerTab("спецпредложение","Скидка для членов Американской Торговой Палаты в РФ",[{"title":"1"},{"title":"2"}])
+	main.page
+		include content
