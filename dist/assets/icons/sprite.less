@@ -1,0 +1,164 @@
+/*
+LESS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: @icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+@icon-home: x y offset_x offset_y width height total_width total_height image_path name;
+
+At the bottom of this section, we provide information about the spritesheet itself
+@spritesheet: width height image @spritesheet-sprites;
+*/
+@icon-basket-name: 'icon-basket';
+@icon-basket-x: 0px;
+@icon-basket-y: 60px;
+@icon-basket-offset-x: 0px;
+@icon-basket-offset-y: -60px;
+@icon-basket-width: 15px;
+@icon-basket-height: 19px;
+@icon-basket-total-width: 80px;
+@icon-basket-total-height: 79px;
+@icon-basket-image: '../assets/icons/sprite.png';
+@icon-basket: 0px 60px 0px -60px 15px 19px 80px 79px '../assets/icons/sprite.png' 'icon-basket';
+@icon-eye-name: 'icon-eye';
+@icon-eye-x: 30px;
+@icon-eye-y: 0px;
+@icon-eye-offset-x: -30px;
+@icon-eye-offset-y: 0px;
+@icon-eye-width: 24px;
+@icon-eye-height: 17px;
+@icon-eye-total-width: 80px;
+@icon-eye-total-height: 79px;
+@icon-eye-image: '../assets/icons/sprite.png';
+@icon-eye: 30px 0px -30px 0px 24px 17px 80px 79px '../assets/icons/sprite.png' 'icon-eye';
+@icon-info-positive-name: 'icon-info-positive';
+@icon-info-positive-x: 0px;
+@icon-info-positive-y: 0px;
+@icon-info-positive-offset-x: 0px;
+@icon-info-positive-offset-y: 0px;
+@icon-info-positive-width: 20px;
+@icon-info-positive-height: 21px;
+@icon-info-positive-total-width: 80px;
+@icon-info-positive-total-height: 79px;
+@icon-info-positive-image: '../assets/icons/sprite.png';
+@icon-info-positive: 0px 0px 0px 0px 20px 21px 80px 79px '../assets/icons/sprite.png' 'icon-info-positive';
+@icon-mark-positive-name: 'icon-mark-positive';
+@icon-mark-positive-x: 64px;
+@icon-mark-positive-y: 32px;
+@icon-mark-positive-offset-x: -64px;
+@icon-mark-positive-offset-y: -32px;
+@icon-mark-positive-width: 13px;
+@icon-mark-positive-height: 16px;
+@icon-mark-positive-total-width: 80px;
+@icon-mark-positive-total-height: 79px;
+@icon-mark-positive-image: '../assets/icons/sprite.png';
+@icon-mark-positive: 64px 32px -64px -32px 13px 16px 80px 79px '../assets/icons/sprite.png' 'icon-mark-positive';
+@icon-nolink-name: 'icon-nolink';
+@icon-nolink-x: 29px;
+@icon-nolink-y: 31px;
+@icon-nolink-offset-x: -29px;
+@icon-nolink-offset-y: -31px;
+@icon-nolink-width: 20px;
+@icon-nolink-height: 18px;
+@icon-nolink-total-width: 80px;
+@icon-nolink-total-height: 79px;
+@icon-nolink-image: '../assets/icons/sprite.png';
+@icon-nolink: 29px 31px -29px -31px 20px 18px 80px 79px '../assets/icons/sprite.png' 'icon-nolink';
+@icon-pen-name: 'icon-pen';
+@icon-pen-x: 0px;
+@icon-pen-y: 31px;
+@icon-pen-offset-x: 0px;
+@icon-pen-offset-y: -31px;
+@icon-pen-width: 19px;
+@icon-pen-height: 19px;
+@icon-pen-total-width: 80px;
+@icon-pen-total-height: 79px;
+@icon-pen-image: '../assets/icons/sprite.png';
+@icon-pen: 0px 31px 0px -31px 19px 19px 80px 79px '../assets/icons/sprite.png' 'icon-pen';
+@icon-question-name: 'icon-question';
+@icon-question-x: 64px;
+@icon-question-y: 0px;
+@icon-question-offset-x: -64px;
+@icon-question-offset-y: 0px;
+@icon-question-width: 16px;
+@icon-question-height: 22px;
+@icon-question-total-width: 80px;
+@icon-question-total-height: 79px;
+@icon-question-image: '../assets/icons/sprite.png';
+@icon-question: 64px 0px -64px 0px 16px 22px 80px 79px '../assets/icons/sprite.png' 'icon-question';
+@spritesheet-width: 80px;
+@spritesheet-height: 79px;
+@spritesheet-image: '../assets/icons/sprite.png';
+@spritesheet-sprites: @icon-basket @icon-eye @icon-info-positive @icon-mark-positive @icon-nolink @icon-pen @icon-question;
+@spritesheet: 80px 79px '../assets/icons/sprite.png' @spritesheet-sprites;
+
+/*
+The provided classes are intended to be used with the array-like variables
+
+.icon-home {
+  .sprite-width(@icon-home);
+}
+.icon-email {
+  .sprite(@icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.sprite-width(@sprite) {
+  width: extract(@sprite, 5);
+}
+
+.sprite-height(@sprite) {
+  height: extract(@sprite, 6);
+}
+
+.sprite-position(@sprite) {
+  @sprite-offset-x: extract(@sprite, 3);
+  @sprite-offset-y: extract(@sprite, 4);
+  background-position: @sprite-offset-x @sprite-offset-y;
+}
+
+.sprite-image(@sprite) {
+  @sprite-image: extract(@sprite, 9);
+  background-image: e(%('url(%a)', e(@sprite-image)));
+}
+
+.sprite(@sprite) {
+  .sprite-image(@sprite);
+  .sprite-position(@sprite);
+  .sprite-width(@sprite);
+  .sprite-height(@sprite);
+}
+
+/*
+The `.sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of LESS
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+.sprites(@spritesheet-sprites);
+*/
+.sprites(@sprites, @i: 1) when (@i <= length(@sprites)) {
+  @sprite: extract(@sprites, @i);
+  @sprite-name: e(extract(@sprite, 10));
+  .@{sprite-name} {
+    .sprite(@sprite);
+  }
+  .sprites(@sprites, @i + 1);
+}
